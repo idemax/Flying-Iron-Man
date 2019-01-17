@@ -29,7 +29,7 @@ public class Clouds : MonoBehaviour {
                 }
             }
             else {
-                float yPos = Random.Range (-7.0f, 7.0f);
+                float yPos = Random.Range (-5.0f, 6.0f);
 
                 cloud.gameObject.transform.position = new Vector3 (16.0f, yPos, cloud.gameObject.transform.position.z);
 
