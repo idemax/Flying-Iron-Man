@@ -18,23 +18,23 @@ public class Clouds : MonoBehaviour {
     }
 
     void Update () {
-        int delayIndex = 1;
+        int delayIndex = 0;
 
         delay += Time.deltaTime;
 
         foreach (GameObject cloud in CloudsMap) {
-            if (cloud.transform.position.x <= 16.0f && cloud.transform.position.x >= -17.0f) {
+            if (cloud.transform.position.x <= 16.0f && cloud.transform.position.x >= -30.0f) {
                 if (delay > 3.0f * delayIndex++) {
                     cloud.transform.Translate (Vector3.left * Time.deltaTime * (6.0f + speedRate));
                 }
             }
             else {
-                float yPos = Random.Range (-5.0f, 5.0f);
+                float yPos = Random.Range (-7.0f, 7.0f);
 
                 cloud.gameObject.transform.position = new Vector3 (16.0f, yPos, cloud.gameObject.transform.position.z);
 
                 delayIndex++;
-                speedRate += 0.01f;
+                speedRate += 0.1f;
             }
         }
     }
