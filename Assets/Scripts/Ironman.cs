@@ -16,8 +16,8 @@ public class Ironman : MonoBehaviour {
         float moveSpeed = 10.0f;
 
         if (Input.GetKey (KeyCode.Q))
-            transform.position += Vector3.up * moveSpeed * Time.deltaTime;
+            transform.position += Vector3.up * moveSpeed * Time.deltaTime / 2;
         else if (Input.GetKey (KeyCode.E))
-            transform.position += -Vector3.up * moveSpeed * Time.deltaTime;
+            transform.position += -Vector3.up * moveSpeed * Time.deltaTime / 2;
     }
 }

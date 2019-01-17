@@ -24,19 +24,19 @@ public class Clouds : MonoBehaviour {
         delay += Time.deltaTime;
 
         foreach (GameObject cloud in CloudsMap) {
-            if (cloud.transform.position.x <= 16.0f && cloud.transform.position.x >= -30.0f) {
-                if (delay > 3.0f * delayIndex++) {
-                    cloud.transform.Translate (Vector3.left * Time.deltaTime * (6.0f + speedRate));
+            if (cloud.transform.position.x <= 16.0f && cloud.transform.position.x >= -25.0f) {
+                if (delay > 2.0f * delayIndex++) {
+                    cloud.transform.Translate (Vector3.left * Time.deltaTime * (5.0f + speedRate));
                 }
             }
             else {
-                float yPos = Random.Range (-5.0f, 6.0f);
+                float yPos = Random.Range (-6.0f, 6.0f);
 
                 cloud.gameObject.transform.position = new Vector3 (16.0f, yPos, cloud.gameObject.transform.position.z);
                 // cloud.gameObject.transform.position = new Vector3 (16.0f, cloud.gameObject.transform.position.y, cloud.gameObject.transform.position.z);
 
                 delayIndex++;
-                speedRate += 0.1f;
+                speedRate += 0.01f;
             }
         }
     }
