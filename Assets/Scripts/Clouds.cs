@@ -13,6 +13,7 @@ public class Clouds : MonoBehaviour {
             if (cloud.tag == "Cloud") {
                 CloudsMap.Add (cloud.gameObject);
                 cloud.gameObject.transform.position = new Vector3 (17.0f, cloud.gameObject.transform.position.y, cloud.gameObject.transform.position.z);
+                // cloud.gameObject.transform.GetComponent<SpriteRenderer> ().orderInLayer = Random.Range (-1, 1);
             }
         }
     }
@@ -32,6 +33,7 @@ public class Clouds : MonoBehaviour {
                 float yPos = Random.Range (-5.0f, 6.0f);
 
                 cloud.gameObject.transform.position = new Vector3 (16.0f, yPos, cloud.gameObject.transform.position.z);
+                // cloud.gameObject.transform.position = new Vector3 (16.0f, cloud.gameObject.transform.position.y, cloud.gameObject.transform.position.z);
 
                 delayIndex++;
                 speedRate += 0.1f;
